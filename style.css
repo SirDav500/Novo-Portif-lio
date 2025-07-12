@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poetsen+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "PT Sans", sans-serif;
+    color: #333;
+}
+
+/* Header */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    background-color: #f5f5f5;
+}
+
+.logo h1{
+    font-size: 1.8rem;
+}
+
+.logo p{
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover{
+    color: #007BFF;
+}
+
+@media (max-width: 600px) {
+    header {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+nav ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    width: 100%;
+}
+
+nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Main */
+
+main{
+    padding: 2rem;
+background-color: antiquewhite;
+}
+
+.apresentacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    min-height: 60vh;
+    margin-bottom: 3rem;
+}
+
+.apresentacao img {
+    max-width: 250px;
+    border-radius: 30px;
+}
+
+.apresentacao .texto {
+    max-width: 600px;
+}
+
+.apresentacao .texto h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #0d1b2a;
+}
+
+.apresentacao .texto p{
+    font-size: 1.25rem;
+    color: #333;
+}
+
+/* Projetos */
+
+#projetos {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+#projetos h2{
+    font-size: 40px;
+}
+
+#projetos h3{
+    margin: 1rem;
+}
+#projetos p{
+    margin: 0.5rem;
+}
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.grid-projetos article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+
+}
+
+.grid-projetos article a {
+    text-decoration: none;
+    color: #0d6efd;
+    background-color: white;
+    border: 2px solid #0d6efd;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 1rem auto 0 auto; /* Centraliza o botão */
+    transition: background 0.3s ease;
+    width: fit-content; /* Faz o botão ter o tamanho mínimo necessário */
+}
+
+.grid-projetos article a:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+/* Responsivo para telas pequenas */
+
+@media (max-width: 600px) {
+.apresentacao {
+    flex-direction: column;
+    text-align: center;
+}
+
+.apresentacao img {
+    max-width: 150px;
+}
+
+.apresentacao .texto h1 {
+    font-size: 2rem;
+    }
+}
+
+.img-projeto-js{
+    margin: 0 auto; /* centraliza em block */
+    display: block;
+    width: 300px;
+    height: 200px;
+    background-image: url('media/js.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.4s ease;
+    border-radius: 20px;
+}
+
+.img-projeto-py{
+    margin: 0 auto; /* centraliza em block */
+    display: block;
+    width: 300px;
+    height: 200px;
+    background-image: url('media/python\ \(1\).jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.4s ease;
+    border-radius: 20px;
+}
+
+.img-projeto-py:hover {
+    background-image: url('media/Captura\ de\ tela\ 2025-07-11\ 194526.png');
+}
+
+.img-projeto-js:hover {
+    background-image: url('media/Captura\ de\ tela\ 2025-07-11\ 193240.png');
+}
+
+/* Sobre mim */
+
+#sobre-mim{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background-color: #fdf3e7;
+}
+
+#texto-sobre-mim {
+    max-width: 500px;
+    text-align: left;
+}
+
+#texto-sobre-mim h1{
+    font: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0d1b2a;
+}
+
+#texto-sobre-mim p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+#sobre-mim video {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #f1f1f1;
+    padding: 2rem;
+    text-align: center;
+    color: #333;
+    margin-top: 3rem;
+}
+
+footer #contato {
+    margin-bottom: 1rem;
+}
+
+footer #contato h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #0d1b2a;
+}
+
+footer #contato ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+footer #contato ul li a {
+    text-decoration: none;
+    color: #1a4e8a; /* azul menos chamativo */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+footer #contato ul li a:hover {
+    color: #084298;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+
